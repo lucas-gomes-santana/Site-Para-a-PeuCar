@@ -1,0 +1,22 @@
+.container-header {
+    display: flex;
+    background-color: #0c2c96;
+
+    .container-image {
+        width: 50%;
+    }
+
+    .container-links-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        border: 1px solid red;
+        gap: 20%;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

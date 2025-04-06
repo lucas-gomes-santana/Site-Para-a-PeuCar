@@ -67,13 +67,18 @@ $azul: #0e30a1;
         position: absolute;
         text-shadow: 1px 1px 2px black;
         top: 35%;
-        left: 70%;
+        left: 75%;
         transform: translate(-50%, -50%);
         color: $branco;
         text-align: center;
 
+        h1 {
+            font-size: 2.1rem;
+        }
+
         h2 {
-            margin-top: 10px;
+            margin-top: 7px;
+            font-size: 1.4rem
         }
     }
 }

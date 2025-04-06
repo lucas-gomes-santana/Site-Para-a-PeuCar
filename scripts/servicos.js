@@ -1,46 +1,74 @@
-// Define a reusable function to create the card component
+// Função para criar um card reutilizável
 function createCardComponent(title, description, imageUrl, linkText, linkHref) {
-    
-    // Create the main container div
-    const containerCard = document.createElement('div');
-    containerCard.classList.add('container-card');
+    const card = document.createElement('div');
+    card.classList.add('container-card');
 
-    // Create and append the title
-    const cardTitle = document.createElement('h3');
-    cardTitle.textContent = title;
-    containerCard.appendChild(cardTitle);
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = title;
+    card.appendChild(titleElement);
 
-    // Create and append the description
-    const cardDescription = document.createElement('p');
-    cardDescription.textContent = description;
-    containerCard.appendChild(cardDescription);
+    const descriptionElement = document.createElement('p');
+    descriptionElement.textContent = description;
+    card.appendChild(descriptionElement);
 
-    // Create and append the image
-    const cardImage = document.createElement('img');
-    cardImage.src = imageUrl;
-    cardImage.alt = title;
-    containerCard.appendChild(cardImage);
+    const imageElement = document.createElement('img');
+    imageElement.src = imageUrl;
+    imageElement.alt = title;
+    card.appendChild(imageElement);
 
-    // Create and append the link
-    const cardLink = document.createElement('a');
-    cardLink.href = linkHref;
-    cardLink.textContent = linkText;
-    containerCard.appendChild(cardLink);
+    const linkElement = document.createElement('a');
+    linkElement.href = linkHref;
+    linkElement.textContent = linkText;
+    card.appendChild(linkElement);
 
-    return containerCard;
+    return card;
 }
 
-// Example usage
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('card-container'); // Ensure you have a container in your HTML with this ID
+    // Seleciona o container principal onde os cards serão inseridos
+    const cardsContainer = document.querySelector('.container-cards-services');
 
-    const card = createCardComponent(
-        'Troca de Pneus',
-        'Realizamos a troca de pneus com segurança e eficiência, garantindo que seu veículo esteja sempre pronto para a estrada.',
-        '../assets/Troca de Pneus.jpg',
-        'Obter Serviço',
-        '#'
-    );
+    // Remove o card vazio que veio do HTML, se necessário
+    const emptyCard = cardsContainer.querySelector('.container-card');
+    if (emptyCard) {
+        cardsContainer.removeChild(emptyCard);
+    }
 
-    container.appendChild(card);
+    // Lista de serviços
+    const services = [
+        {
+            title: 'Troca de Pneus',
+            description: 'Realizamos a troca de pneus com segurança e eficiência, garantindo que seu veículo esteja sempre pronto para a estrada.',
+            imageUrl: '../assets/Troca de Pneus.jpg',
+            linkText: 'Agendar Serviço',
+            linkHref: '#'
+        },
+        {
+            title: 'Troca de Óleo',
+            description: 'Fazer a troca de óleo é essencial para garantir o bom desempenho.Aqui na nossa oficina,utilizamos produtos de alta qualidade para cuidar bem do motor do seu carro.',
+            imageUrl: '../assets/Troca de Óleo.jpg',
+            linkText: 'Agendar Serciço',
+            linkHref: '#'
+        },
+        {
+            title: 'Revisão Completa',
+            description: 'Verificamos freios, suspensão, motor, e outros itens essenciais para garantir que você dirija com tranquilidade e sem surpresas.',
+            imageUrl: '../assets/Revisão.jpg',
+            linkText: 'Agendar Serviço',
+            linkHref: '#'
+        }
+    ];
+
+    // Cria e adiciona os cards ao container
+    services.forEach(service => {
+        const card = createCardComponent(
+            service.title,
+            service.description,
+            service.imageUrl,
+            service.linkText,
+            service.linkHref
+        );
+        
+        cardsContainer.appendChild(card);
+    });
 });

@@ -1,0 +1,117 @@
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flexRow() {
+    display: flex;
+    justify-content: center;
+}
+
+$branco: #fff;
+$azul: #0e30a1;
+
+
+.container-header {
+    display: flex;
+    background-color: $azul;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+
+    .container-image {
+        width: 50%;
+
+        img {
+            width: 170px;
+            margin-left: 150px;
+        }
+    }
+
+    .container-links-header {
+        @include flexRow();
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        gap: 8%;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.15rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.container-home {
+    margin-top: 100px;
+
+    .image-wrapper {
+        position: relative;
+        width: 90%;
+        height: 600px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 5%;
+            border: 3px solid gray;
+            border-radius: 15px;
+        }
+    }
+    .container-content {
+        position: absolute;
+        text-shadow: 1px 1px 2px black;
+        top: 35%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: $branco;
+        text-align: center;
+
+        h1 {
+            font-size: 2.1rem;
+        }
+
+        h2 {
+            margin-top: 7px;
+            font-size: 1.4rem
+        }
+    }
+}
+
+.container-footer {
+    @include flexRow();
+    color: $branco;
+    background-color: rgb(11, 11, 11);
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.1rem;
+    gap: 15%;
+
+    .container-footer-content {
+        @include flexRow();
+        align-items: center;
+    }
+
+    .container-social-media {
+        @include flexRow();
+        align-items: center;
+
+        .logos {
+            @include flexRow();
+            align-items: center;
+            gap: 30px;
+            margin-left: 15px;
+            font-size: 1.7rem;
+            
+            i {
+                color: $branco;     
+            }
+        }
+    }
+}
+

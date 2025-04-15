@@ -8,25 +8,15 @@
     <title>PeuCar Home</title>
 </head>
 <body>
-    <header class="container-header">
-        <div class="container-image">
-            <img src="/assets/PeuCar_logo-removebg-preview_upscaled.png" alt="">
-        </div>
-        
-        <nav class="container-links-header">
-            <a href="serviços.html">Nossos Serviços</a>
-            <a href="contatos.html">Fale Conosco</a>
-            <a href="perfil.html">Sobre Nós</a>
-        </nav>
-    </header>
-
+    
     <section class="container-home">
         <div class="image-wrapper">
-            <img src="/assets/Serviços Mecânicos.jpg" alt="">
+            <img class="servicos-mecanicos" src="/assets/Serviços Mecânicos.jpg" alt="">
 
             <div class="container-content">
                 <h1>Seja Bem Vindo a PeuCar!</h1>
-                <h2>Especialistas em mecânica automotiva</h2>
+                <h2>A melhor oficina mecânica de Ipirá!</h2>
+                <img class="PeuCar-logo" src="../assets/PeuCar logo.jpg" alt="">
             </div>
         </div>
     </section>
@@ -34,8 +24,8 @@
     <footer class="container-footer">
 
         <div class="container-footer-content">
-            <p style="color: red;">PeuCar &copy; 2025.</p>
-            <p>Todos os direitos reservados</p>
+            <p style="color: red;">PeuCar &copy; <span id="ano"></span></p>
+            <p>.Todos os direitos reservados</p>
         </div>
 
         <div class="container-social-media">
@@ -51,5 +41,12 @@
         </div>
     </footer>
 
+    <script>
+        const anoAtual = new Date().getFullYear();
+        const anoElemento = document.getElementById('ano');
+        anoElemento.textContent = anoAtual;
+    </script>
+
+    <script src="../scripts/header.js" defer></script>
 </body>
 </html> 

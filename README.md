@@ -14,14 +14,13 @@ Abaixo está a estrutura de diretórios do projeto:
 
 - **styles**: Contém os arquivos CSS e SCSS para estilização do site.
 
+- **scripts**: Códigos Javascript que realizam diferentes funções no site.
+
 ****
 
 ## Status do Projeto
 
-Atualmente, este repositório é **privado**.Ele se tornará público quando o projeto for concluído para que o cliente possa acessá-lo.
+Este projeto é exclusivo para o meu cliente e não está aberto para contribuições externas,nem para distribuição do código fonte.Ele está público apenas para exibição.Leia a [licença]() do repositório para mais informações
 
 
-Este projeto é exclusivo para o cliente **PeuCar** e não está aberto para contribuições externas.
-
-
-Caso tenha dúvidas, precise de suporte ou tenha interesse em um dos meus serviços, entre em contato com o desenvolvedor pelo e-mail: ls8294921@gmail.com.
+Caso tenha dúvidas, precise de suporte ou tenha interesse em um dos meus serviços, entre em contato com o desenvolvedor pelo e-mail: ls8294921@gmai.com,por telefone: (75) 99245-9695,ou então visite o meu linkedin ou portifólio.

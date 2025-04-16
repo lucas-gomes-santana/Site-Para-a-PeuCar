@@ -23,4 +23,4 @@ Abaixo está a estrutura de diretórios do projeto:
 Este projeto é exclusivo para o meu cliente e não está aberto para contribuições externas,nem para distribuição do código fonte.Ele está público apenas para exibição.Leia a [licença]() do repositório para mais informações
 
 
-Caso tenha dúvidas, precise de suporte ou tenha interesse em um dos meus serviços, entre em contato com o desenvolvedor pelo e-mail: ls8294921@gmai.com,por telefone: (75) 99245-9695,ou então visite o meu linkedin ou portifólio.
+Caso tenha dúvidas, precise de suporte ou tenha interesse em um dos meus serviços, entre em contato com o desenvolvedor pelo e-mail: ls8294921@gmail.com,por telefone: (75) 99245-9695,ou então visite o meu linkedin ou portifólio.

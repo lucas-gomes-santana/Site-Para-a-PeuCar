@@ -1,4 +1,4 @@
-// File: /home/lucas/Projeto Site para a PeuCar/scripts/header.js
+// Header component que é utilizado em todas as páginas do site
 
 function createHeader() {
     const header = document.createElement('header');
@@ -6,10 +6,10 @@ function createHeader() {
 
     header.innerHTML = `
         <div class="container-image">
-            <img src="/assets/PeuCar_logo-removebg-preview_upscaled.png" alt="">
+            <img src="../assets/PeuCar_logo-removebg-preview_upscaled.png" alt="">
         </div>
         <nav class="container-links-header">
-            <a href="serviços.html">Nossos Serviços</a>
+            <a href="servicos.html">Nossos Serviços</a>
             <a href="contatos.html">Fale Conosco</a>
             <a href="perfil.html">Sobre Nós</a>
         </nav>
@@ -23,5 +23,4 @@ function insertHeader() {
     document.body.insertBefore(header, document.body.firstChild);
 }
 
-// Call this function on every page to insert the header
 insertHeader();

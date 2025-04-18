@@ -1,5 +1,5 @@
 @mixin linkAnimation() {
-    transform: scale(1.15);
+    transform: scale(1.13);
     transition: all 0.2s ease-in-out;
 }
 
@@ -10,6 +10,7 @@
 @import './services';
 @import './header';
 @import './contatos';
+@import './perfil';
 
 
 * {
@@ -23,7 +24,6 @@
 
         &:hover {
             @include linkAnimation();
-            text-decoration: underline;
         }
     }
 }

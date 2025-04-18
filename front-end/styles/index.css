@@ -1,33 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.container-header {
-  display: flex;
-  background-color: #0e30a1;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
-}
-.container-header .container-image {
-  width: 50%;
-}
-.container-header .container-image img {
-  width: 170px;
-  margin-left: 150px;
-}
-.container-header .container-links-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-  width: 50%;
-  gap: 8%;
-}
-.container-header .container-links-header a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.15rem;
-}
-.container-header .container-links-header a:hover {
-  text-decoration: underline;
-}
-
 .container-home {
   margin-top: 100px;
 }
@@ -107,16 +78,17 @@
 .container-cards-services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 60px 0 0 3%;
+  margin: 150px 0 0 3%;
 }
 .container-cards-services .container-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 450px;
-  max-height: 400px;
+  max-width: 470px;
+  max-height: 440px;
   gap: 15px;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 15px;
 }
 .container-cards-services .container-card:hover {
   transform: scale(1.02);
@@ -128,6 +100,13 @@
   border-radius: 10px;
   border: 2px solid #715858;
 }
+.container-cards-services .container-card a {
+  background-color: green;
+  color: white;
+  padding: 7px 10px;
+  font-weight: bold;
+  border-radius: 20px;
+}
 
 .container-header {
   display: flex;
@@ -138,8 +117,8 @@
   width: 50%;
 }
 .container-header .container-image img {
-  width: 170px;
-  margin-left: 150px;
+  width: 180px;
+  margin-left: 90px;
 }
 .container-header .container-links-header {
   display: flex;
@@ -147,15 +126,105 @@
   align-items: center;
   justify-content: space-around;
   width: 50%;
-  gap: 8%;
+  gap: 5%;
 }
 .container-header .container-links-header a {
   color: white;
   text-decoration: none;
   font-size: 1.15rem;
 }
-.container-header .container-links-header a:hover {
-  text-decoration: underline;
+
+.contacts-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 8rem auto;
+}
+.contacts-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.contacts-container .contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contacts-container .contacts-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #555;
+}
+.contacts-container .contacts-form label input,
+.contacts-container .contacts-form label textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+.contacts-container .contacts-form label input:focus,
+.contacts-container .contacts-form label textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.contacts-container .contacts-form label textarea {
+  resize: none;
+  min-height: 100px;
+}
+.contacts-container .contacts-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contacts-container .contacts-form button:hover {
+  background-color: #0056b3;
+}
+
+.contacts-container_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+h1 {
+  text-align: center;
+  margin: 100px 0 30px 0;
+}
+
+.container-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  gap: 30px;
+}
+.container-profile p {
+  font-size: 1.3rem;
+}
+.container-profile img {
+  width: 900px;
+  border: 2px solid rgb(109, 108, 108);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container-profile img:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
 }
 
 * {
@@ -168,7 +237,6 @@
   text-decoration: none;
 }
 * a:hover {
-  transform: scale(1.15);
+  transform: scale(1.13);
   transition: all 0.2s ease-in-out;
-  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

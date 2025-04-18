@@ -11,40 +11,8 @@
 
 $branco: #fff;
 $azul: #0e30a1;
+$espaco: 20px;
 
-
-.container-header {
-    display: flex;
-    background-color: $azul;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
-
-    .container-image {
-        width: 50%;
-
-        img {
-            width: 170px;
-            margin-left: 150px;
-        }
-    }
-
-    .container-links-header {
-        @include flexRow();
-        align-items: center;
-        justify-content: space-around;
-        width: 50%;
-        gap: 8%;
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.15rem;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
 
 .container-home {
     margin-top: 100px;
@@ -52,9 +20,9 @@ $azul: #0e30a1;
     .image-wrapper {
         position: relative;
         width: 90%;
-        height: 600px;
+        height: 800px;
 
-        img {
+        .servicos-mecanicos {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -77,8 +45,20 @@ $azul: #0e30a1;
         }
 
         h2 {
-            margin-top: 7px;
+            margin-top: $espaco;
             font-size: 1.4rem
+        }
+
+        .PeuCar-logo {
+            margin-top: $espaco;
+            width: 190px;
+            border: 2px solid gray;
+            border-radius: 50%;
+
+            &:hover {
+                transform: scale(1.08);
+                transition: 0.2s;
+            }
         }
     }
 }

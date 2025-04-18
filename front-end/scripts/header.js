@@ -1,14 +1,13 @@
-// Header component que é utilizado em todas as páginas do site
-
 function createHeader() {
     const header = document.createElement('header');
     header.className = 'container-header';
 
     header.innerHTML = `
         <div class="container-image">
-            <img src="../assets/PeuCar_logo-removebg-preview_upscaled.png" alt="">
+            <img src="../assets/PeuCar_logo-removebg-preview_upscaled.png" alt="Logo">
         </div>
-        <nav class="container-links-header">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+        <nav class="container-links-header" id="navLinks">
             <a href="servicos.html">Nossos Serviços</a>
             <a href="contatos.html">Fale Conosco</a>
             <a href="perfil.html">Sobre Nós</a>
@@ -22,6 +21,21 @@ function createHeader() {
 function insertHeader() {
     const header = createHeader();
     document.body.insertBefore(header, document.body.firstChild);
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    // Alterna a exibição dos links de navegação ao clicar no ícone
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    // Garante que os links sejam exibidos em telas grandes
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('show');
+        }
+    });
 }
 
 insertHeader();

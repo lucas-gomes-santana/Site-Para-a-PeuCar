@@ -11,7 +11,7 @@
 
 $branco: #fff;
 $azul: #0e30a1;
-$espaco: 20px;
+$espaco: 15px;
 
 
 .container-home {
@@ -27,7 +27,7 @@ $espaco: 20px;
             height: 100%;
             object-fit: cover;
             margin-left: 5%;
-            border: 3px solid gray;
+            border: 4px solid gray;
             border-radius: 15px;
         }
     }
@@ -52,7 +52,7 @@ $espaco: 20px;
         .PeuCar-logo {
             margin-top: $espaco;
             width: 190px;
-            border: 2px solid gray;
+            border: 2px solid rgb(219, 51, 51);
             border-radius: 50%;
 
             &:hover {
@@ -95,3 +95,216 @@ $espaco: 20px;
     }
 }
 
+
+// Responsividade para tablets e celulares
+@media (max-width: 1100px) {
+    .container-home {
+
+        .image-wrapper {
+            height: 500px;
+            margin-left: 5%;
+
+            .servicos-mecanicos {
+                height: 100%;
+                margin-left: 0;
+                border: 2px solid gray;
+                border-radius: 10px;
+            }
+        }
+
+        .container-content {
+            top: 30%;
+            left: 75%;
+            transform: translate(-30%, -50%);
+
+            h1 {
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .PeuCar-logo {
+                width: 110px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .container-footer {
+        gap: 20%;
+        
+        .container-footer-content {
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .container-social-media  {
+            font-size: 1rem;
+
+            .logos {
+                gap: 15px;
+                font-size: 1.4rem;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container-home {
+
+        .image-wrapper {
+            height: 400px;
+
+            .servicos-mecanicos {
+                height: 100%;
+                border: 1px solid gray;
+                border-radius: 8px;
+            }
+        }
+
+        .container-content {
+            transform: translate(-30%, -50%);
+            top: 25%;
+            left: 70%;
+
+            h1 {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .PeuCar-logo {
+                width: 90px;
+            }
+        }
+    }
+
+    .container-footer {
+        padding: 10px;
+
+        .container-footer-content {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .container-social-media {
+            p {
+                font-size: 0.8rem;
+            }
+
+            .logos {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .container-home {
+        margin-top: 50px;
+
+        .image-wrapper {
+            height: 300px;
+
+            .servicos-mecanicos {
+                height: 100%;
+                border: 1px solid gray;
+                border-radius: 5px;
+            }
+        }
+
+        .container-content {
+            top: 20%;
+
+            h1 {
+                font-size: 0.8rem;
+            }
+
+            h2 {
+                font-size: 0.7rem;
+            }
+
+            .PeuCar-logo {
+                width: 80px;
+            }
+        }
+    }
+
+    .container-footer {
+        @include flexColumn();
+        gap: 10px;
+
+        .container-footer-content {
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .container-social-media {
+            .logos {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .container-home {
+        margin-top: 30px;
+
+        .image-wrapper {
+            height: 250px;
+
+            .servicos-mecanicos {
+                height: 100%;
+                border: 1px solid gray;
+                border-radius: 5px;
+            }
+        }
+
+        .container-content {
+            top: 15%;
+            transform: translate(-10%, -40%);
+
+            h1 {
+                font-size: 0.6rem;
+            }
+
+            h2 {
+                font-size: 0.6rem;
+            }
+
+            .PeuCar-logo {
+                width: 70px;
+            }
+        }
+    }
+
+    .container-footer {
+        padding: 5px;
+
+        .container-footer-content {
+            p {
+                font-size: 0.7rem;
+            }
+        }
+
+        .container-social-media {
+            p {
+                font-size: 0.7rem;
+            }
+
+            .logos {
+                font-size: 1rem;
+            }
+        }
+    }
+}

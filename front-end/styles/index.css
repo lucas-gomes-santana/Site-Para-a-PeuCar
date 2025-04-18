@@ -191,7 +191,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: 8rem auto;
+  margin: 6rem auto;
 }
 .contacts-container h3 {
   font-size: 1.5rem;
@@ -248,9 +248,144 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
+}
+.contacts-container_2 h3 {
+  font-size: 1.4rem;
+}
+.contacts-container_2 p {
+  font-size: 1.2rem;
+}
+.contacts-container_2 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.contacts-container_2 span i {
+  font-size: 1.7rem;
+  color: green;
 }
 
+@media (max-width: 1024px) {
+  .contacts-container {
+    max-width: 90%;
+    margin: 5rem auto;
+    padding: 1.5rem;
+  }
+  .contacts-container h3 {
+    font-size: 1.3rem;
+  }
+  .contacts-container .contacts-form {
+    gap: 0.75rem;
+  }
+  .contacts-container .contacts-form label {
+    font-size: 0.9rem;
+  }
+  .contacts-container .contacts-form label input,
+  .contacts-container .contacts-form label textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .contacts-container .contacts-form button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .contacts-container_2 {
+    gap: 10px;
+  }
+  .contacts-container_2 h3 {
+    font-size: 1.2rem;
+  }
+  .contacts-container_2 p {
+    font-size: 1rem;
+  }
+  .contacts-container_2 span {
+    gap: 3px;
+  }
+  .contacts-container_2 span i {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-container {
+    padding: 1rem;
+    margin: 4rem auto;
+  }
+  .contacts-container h3 {
+    font-size: 1.1rem;
+  }
+  .contacts-container .contacts-form {
+    gap: 0.5rem;
+  }
+  .contacts-container .contacts-form label {
+    font-size: 0.8rem;
+  }
+  .contacts-container .contacts-form label input,
+  .contacts-container .contacts-form label textarea {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+  .contacts-container .contacts-form button {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+  .contacts-container_2 {
+    gap: 8px;
+  }
+  .contacts-container_2 h3 {
+    font-size: 1rem;
+  }
+  .contacts-container_2 p {
+    font-size: 0.9rem;
+  }
+  .contacts-container_2 span {
+    gap: 2px;
+  }
+  .contacts-container_2 span i {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-container {
+    padding: 0.5rem;
+    margin: 3rem auto;
+  }
+  .contacts-container h3 {
+    font-size: 1rem;
+  }
+  .contacts-container .contacts-form {
+    gap: 0.4rem;
+  }
+  .contacts-container .contacts-form label {
+    font-size: 0.7rem;
+  }
+  .contacts-container .contacts-form label input,
+  .contacts-container .contacts-form label textarea {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+  .contacts-container .contacts-form button {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+  .contacts-container_2 {
+    gap: 5px;
+  }
+  .contacts-container_2 h3 {
+    font-size: 0.9rem;
+  }
+  .contacts-container_2 p {
+    font-size: 0.9rem;
+  }
+  .contacts-container_2 span {
+    gap: 4px;
+    font-size: 0.8rem;
+  }
+  .contacts-container_2 span i {
+    font-size: 1.2rem;
+  }
+}
 h1 {
   text-align: center;
   margin: 100px 0 30px 0;

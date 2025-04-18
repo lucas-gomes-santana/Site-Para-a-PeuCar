@@ -1,5 +1,7 @@
 .container-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(21, 21, 141);
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
 
@@ -12,11 +14,18 @@
         }
     }
 
+    .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
     .container-links-header {
         display: flex;
-        justify-content: center;
-        align-items: center;
         justify-content: space-around;
+        align-items: center;
         width: 50%;
         gap: 5%;
 
@@ -24,6 +33,93 @@
             color: white;
             text-decoration: none;
             font-size: 1.15rem;
+        }
+    }
+
+    // Adicionando essa media query aqui para fazer o ícone do menu aparecer quando a tela for muito pequena
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .container-links-header {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: rgb(21, 21, 141);
+            padding: 10px 0;
+            margin-left: 75%;
+
+
+            a {
+                padding: 10px 0;
+                font-size: 1.2rem;
+            }
+
+            &.show {
+                display: flex;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .container-links-header {
+            padding: 0;
+            margin-left: 68%;
+
+            a {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+
+// Responsividade para telas menores
+@media (max-width: 1100px) {
+    .container-header {
+
+        .container-image {
+            width: 40%;
+
+            img {
+                margin-left: 50px;
+                width: 140px;
+            }
+        }
+
+        .container-links-header {
+            width: 60%;
+            gap: 10%;
+            justify-content: center;
+
+            a {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .container-header {
+
+        .container-image {
+            img {
+                width: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .container-header {
+        .container-image {
+            img {
+                width: 100px;
+                margin-left: 30px;
+            }
         }
     }
 }

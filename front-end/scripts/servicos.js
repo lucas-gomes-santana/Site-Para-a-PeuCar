@@ -34,24 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsContainer.removeChild(emptyCard);
     }
 
-    // Lista de serviços
+    // Array de objetos com os dados dos serviços
     const services = [
         {
-            title: 'Troca de Pneus',
-            description: 'Realizamos a troca de pneus com segurança e eficiência, garantindo que seu veículo esteja sempre pronto para a estrada.',
-            imageUrl: '../assets/Troca de Pneus.jpg',
+            title: 'Troca e venda de peças',
+            description: 'Realizamos a troca e também venda de peças de alta eficiência.Garantindo a segurança e o bom funcionamento e desempenho do seu veículo.',
+            imageUrl: '../assets/Troca e venda de peças.jpg',
             linkText: 'Agendar Serviço',
             linkHref: 'contatos.html'
         },
         {
-            title: 'Troca de Óleo',
-            description: 'Fazer a troca de óleo é essencial para garantir o bom desempenho.Aqui na nossa oficina,utilizamos produtos de alta qualidade para cuidar bem do motor do seu carro.',
+            title: 'Troca de óleo',
+            description: 'Fazer a troca de óleo é essencial para garantir bom desempenho.Aqui na nossa oficina,utilizamos produtos de alta qualidade para cuidar bem do motor do seu carro.',
             imageUrl: '../assets/Troca de Óleo.jpg',
             linkText: 'Agendar Serviço',
             linkHref: 'contatos.html'
         },
         {
-            title: 'Revisão Completa',
+            title: 'Revisão completa',
             description: 'Verificamos freios, suspensão, motor, e outros itens essenciais para garantir que você dirija com tranquilidade e sem surpresas.',
             imageUrl: '../assets/Revisão.jpg',
             linkText: 'Agendar Serviço',

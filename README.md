@@ -14,4 +14,4 @@
 
 <br>
 
-- **public:** Contém arquivos que fazem o site ser encontrado pelo mecanismo de busca do google.
+- **public:** Contém arquivos que fazem o site ser encontrado pelo mecanismo de busca do google.Está dentro da pasta **front-end**.

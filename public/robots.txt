@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peucar-ipira.vercel.app/sitemap.xml

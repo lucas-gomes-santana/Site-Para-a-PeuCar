@@ -2,16 +2,18 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
     event.preventDefault(); // Evita o comportamento padrão do formulário
 
     // Obtenha os dados do formulário
+    const from = document.querySelector('input[name="from"]').value; // Captura o e-mail do remetente
     const subject = document.querySelector('input[name="subject"]').value;
     const message = document.querySelector('textarea[name="message"]').value;
 
-    // Envie os dados para o backend
+
+    // Envia os dados para o backend
     fetch('http://localhost:3000/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ subject, message }),
+        body: JSON.stringify({ from, subject, message }), // Inclui o campo "from"
     })
         .then((response) => {
             if (response.ok) {

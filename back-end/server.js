@@ -1,24 +1,24 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const cors = require('cors');
-
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? 'SENHA CARREGADA' : 'SENHA NÃO CARREGADA');
+console.log('Servidor iniciado. Variáveis de ambiente carregadas.');
+console.log('EMAIL_USER:', process.env.EMAIL_SERVER);
+console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD);
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: {
-        user: process.env.EMAIL_USER,
+        user: process.env.EMAIL_SERVER,
         pass: process.env.EMAIL_PASSWORD,
     },
 });
@@ -32,13 +32,14 @@ transporter.verify((error, success) => {
 });
 
 app.post('/send-email', (req, res) => {
-    const { subject, message } = req.body;
+    const { from, subject, message } = req.body;
 
     const emailOptions = {
-        from: process.env.EMAIL_USER,
-        to: 'ls7128387@gmail.com',
+        from: process.env.EMAIL_SERVER, 
+        to: process.env.EMAIL_RECIPIENT, 
         subject: subject,
         text: message,
+        replyTo: from,
     };
 
     transporter.sendMail(emailOptions, (error, info) => {

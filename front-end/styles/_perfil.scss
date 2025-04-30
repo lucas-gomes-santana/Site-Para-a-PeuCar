@@ -9,7 +9,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     width: 80%;
-    margin-left: 10%;
+    margin: 0 0 40px 10%;
     gap: 30px;
 
     p {
@@ -25,6 +25,70 @@ h1 {
         &:hover {
             transform: scale(1.02);
             transition: all 0.2s ease-in-out;
+        }
+    }
+}
+
+
+/*Responsividade para telas menores*/
+@media (max-width:1100px) {
+    .container-profile {
+        img {
+            width: 600px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 1.4rem;
+        margin: 60px 0 15px 0;
+    }
+
+    .container-profile {
+        width: 92%;
+        margin-left: 4%;
+        gap: 20px;
+
+        p {
+            font-size: 1rem;
+        }
+
+        img {
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .container-profile {
+        img {
+            width: 330px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 1rem;
+        margin-top: 35px;
+    }
+
+    .container-profile {
+        img {
+            width: 270px;
+        }
+
+        p {
+            font-size: 0.75rem;
         }
     }
 }

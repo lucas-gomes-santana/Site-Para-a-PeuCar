@@ -11,7 +11,7 @@ function createHeader() {
             <a href="servicos.html">Nossos Serviços</a>
             <a href="contatos.html">Fale Conosco</a>
             <a href="perfil.html">Sobre Nós</a>
-            <a href="home.html">Home</a>
+            <a href="index.html">Home</a>
         </nav>
     `;
 

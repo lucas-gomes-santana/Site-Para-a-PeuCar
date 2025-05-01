@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Troca e venda de peças',
             description: 'Realizamos a troca e também venda de peças de alta eficiência.Garantindo a segurança e o bom funcionamento e desempenho do seu veículo.',
             imageUrl: '../assets/Troca e venda de peças.jpg',
-            linkText: 'Agendar Serviço',
+            linkText: 'Comprar peças',
             linkHref: 'contatos.html'
         },
         {

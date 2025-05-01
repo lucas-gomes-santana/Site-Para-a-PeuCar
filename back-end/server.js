@@ -9,9 +9,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log('Servidor iniciado. Variáveis de ambiente carregadas.');
-console.log('EMAIL_USER:', process.env.EMAIL_SERVER);
-console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD);
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -23,7 +20,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-transporter.verify((error, success) => {
+transporter.verify((error) => {
     if (error) {
         console.error('Erro ao verificar SMTP:', error);
     } else {
@@ -32,14 +29,14 @@ transporter.verify((error, success) => {
 });
 
 app.post('/send-email', (req, res) => {
-    const { from, subject, message } = req.body;
+    const { from, subject, message, name, phone } = req.body;
 
     const emailOptions = {
-        from: process.env.EMAIL_SERVER, 
-        to: process.env.EMAIL_RECIPIENT, 
+        from: process.env.EMAIL_SERVER,
+        to: process.env.EMAIL_RECIPIENT,
         subject: subject,
-        text: message,
-        replyTo: from,
+        text: `Mensagem enviada por ${name}\n\n Número: ${phone} \n\n E-mail: ${from}:\n\n${message}`,
+        replyTo: from, // Permite que o destinatário responda diretamente ao remetente
     };
 
     transporter.sendMail(emailOptions, (error, info) => {

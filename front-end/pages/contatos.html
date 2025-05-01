@@ -14,17 +14,30 @@
 
         <form class="contacts-form">
             <label>
-                Seu E-mail:
-                <input type="email" name="from" required placeholder="Insira seu e-mail..." />
+                Seu Nome(obrigatório):
+                <input type="text" name="name" required placeholder="Insira seu nome completo..." />
             </label>
+
+            <label>
+                Seu Número(obrigatório):
+                <input type="tel" name="phone" required placeholder="Insira seu telefone..." />
+            </label>
+
+            <label>
+                Seu E-mail(opcional):
+                <input type="email" name="from" placeholder="Insira seu e-mail..." />
+            </label>
+
             <label>
                 Tema:
-                <input type="text" name="subject" required placeholder="Insira o Tema..." />
+                <input type="text" name="subject" required placeholder="Insira o Tema.Ex: Quero consertar o meu carro..." />
             </label>
+
             <label>
                 Mensagem:
-                <textarea name="message" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                <textarea name="message" required placeholder="Escreva sua requisição de serviço aqui..."></textarea>
             </label>
+            
             <button type="submit">Enviar Mensagem</button>
         </form>
     </section>

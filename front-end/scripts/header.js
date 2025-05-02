@@ -4,14 +4,14 @@ function createHeader() {
 
     header.innerHTML = `
         <div class="container-image">
-            <img src="../assets/PeuCar_logo-removebg-preview_upscaled.png" alt="Logo">
+            <img src="/front-end/assets/PeuCar_logo-removebg-preview_upscaled.png" alt="Logo">
         </div>
         <div class="menu-toggle" id="menuToggle">☰</div>
         <nav class="container-links-header" id="navLinks">
-            <a href="servicos.html">Nossos Serviços</a>
-            <a href="contatos.html">Fale Conosco</a>
-            <a href="perfil.html">Sobre Nós</a>
-            <a href="index.html">Home</a>
+            <a href="/front-end/pages/servicos.html">Nossos Serviços</a>
+            <a href="/front-end/pages/contatos.html">Fale Conosco</a>
+            <a href="/front-end/pages/perfil.html">Sobre Nós</a>
+            <a href="/front-end/index.html">Home</a>
         </nav>
     `;
 

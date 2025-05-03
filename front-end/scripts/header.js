@@ -4,7 +4,7 @@ function createHeader() {
 
     header.innerHTML = `
         <div class="container-image">
-            <img src="assets/PeuCar_logo-removebg-preview_upscaled.png" alt="Logo">
+            <img src="assets/peucar-logo-sem-fundo.png" alt="Logo">
         </div>
         <div class="menu-toggle" id="menuToggle">☰</div>
         <nav class="container-links-header" id="navLinks">

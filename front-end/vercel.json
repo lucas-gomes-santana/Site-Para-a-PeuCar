@@ -1,7 +1,9 @@
 {
   "version": 2,
+  "cleanUrls": true,
   "builds": [
     { "src": "*.html", "use": "@vercel/static" },
+    { "src": "pages/*.html", "use": "@vercel/static" },
     { "src": "styles/*.css", "use": "@vercel/static" },
     { "src": "scripts/*.js", "use": "@vercel/static" },
     { "src": "assets/*", "use": "@vercel/static" }
@@ -10,6 +12,7 @@
     { "src": "/styles/(.*)", "headers": { "Content-Type": "text/css" } },
     { "src": "/scripts/(.*)", "headers": { "Content-Type": "application/javascript" } },
     { "src": "/assets/(.*)", "headers": { "Content-Type": "image/jpeg" } },
+    { "src": "/pages/(.*).html", "dest": "/pages/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

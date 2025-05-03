@@ -39,21 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Troca e venda de peças',
             description: 'Realizamos a troca e também venda de peças de alta eficiência.Garantindo a segurança e o bom funcionamento e desempenho do seu veículo.',
-            imageUrl: '../assets/troca-e-venda-de-pecas.jpg',
+            imageUrl: '/assets/troca-e-venda-de-pecas.jpg',
             linkText: 'Comprar peças',
             linkHref: 'contatos.html'
         },
         {
             title: 'Troca de óleo',
             description: 'Fazer a troca de óleo é essencial para garantir bom desempenho.Aqui na nossa oficina,utilizamos produtos de alta qualidade para cuidar bem do motor do seu carro.',
-            imageUrl: '../assets/troca-de-oleo.jpg',
+            imageUrl: '/assets/troca-de-oleo.jpg',
             linkText: 'Agendar Serviço',
             linkHref: 'contatos.html'
         },
         {
             title: 'Revisão completa',
             description: 'Verificamos freios, suspensão, motor, e outros itens essenciais para garantir que você dirija com tranquilidade e sem surpresas.',
-            imageUrl: '../assets/revisao.jpg',
+            imageUrl: '/assets/revisao.jpg',
             linkText: 'Agendar Serviço',
             linkHref: 'contatos.html'
         }

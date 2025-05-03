@@ -8,10 +8,10 @@ function createHeader() {
         </div>
         <div class="menu-toggle" id="menuToggle">☰</div>
         <nav class="container-links-header" id="navLinks">
-            <a href="pages/servicos.html">Nossos Serviços</a>
-            <a href="pages/contatos.html">Fale Conosco</a>
-            <a href="pages/perfil.html">Sobre Nós</a>
-            <a href="index.html">Home</a>
+            <a href="/pages/servicos.html">Nossos Serviços</a>
+            <a href="/pages/contatos.html">Fale Conosco</a>
+            <a href="/pages/perfil.html">Sobre Nós</a>
+            <a href="/index.html">Home</a>
         </nav>
     `;
 

@@ -11,7 +11,7 @@
   "routes": [
     { "src": "/styles/(.*)", "headers": { "Content-Type": "text/css" } },
     { "src": "/scripts/(.*)", "headers": { "Content-Type": "application/javascript" } },
-    { "src": "/assets/(.*)", "headers": { "Content-Type": "image/jpeg" } },
+    { "src": "/assets/(.*)", "headers": { "Content-Type": "application/octet-stream" } },
     { "src": "/pages/(.*).html", "dest": "/pages/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]

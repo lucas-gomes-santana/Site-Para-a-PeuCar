@@ -1,25 +1,24 @@
 {
-    "version": 2,
-    "routes": [
+    "rewrites": [
         {
-            "src": "/assets/(.*)",
-            "dest": "/assets/$1"
+            "source": "/assets/:path*",
+            "destination": "/assets/:path*"
         },
         {
-            "src": "/styles/(.*)",
-            "dest": "/styles/$1"
+            "source": "/styles/:path*",
+            "destination": "/styles/:path*"
         },
         {
-            "src": "/scripts/(.*)",
-            "dest": "/scripts/$1"
+            "source": "/scripts/:path*",
+            "destination": "/scripts/:path*"
         },
         {
-            "src": "/pages/(.*)",
-            "dest": "/pages/$1"
+            "source": "/pages/:path*",
+            "destination": "/pages/:path*"
         },
         {
-            "src": "/",
-            "dest": "/index.html"
+            "source": "/",
+            "destination": "/index.html"
         }
     ]
 }

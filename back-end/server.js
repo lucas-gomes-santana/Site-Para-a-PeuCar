@@ -38,10 +38,6 @@ app.post('/send-email', (req, res) => {
     try {
         const { from, subject, message, name, phone } = req.body;
 
-        if (!from || !subject || !message || !name || !phone) {
-            return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
-        }
-
         const emailOptions = {
             from: process.env.EMAIL_SERVER,
             to: process.env.EMAIL_RECIPIENT,

@@ -14,7 +14,7 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
     }
 
     // Envia os dados para a API
-    fetch('http://localhost:3000/send-email', {
+    fetch('https://peucar-automotivos-servidor.onrender.com/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -8,8 +8,8 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
     const name = document.querySelector('input[name="name"]').value;
     const phone = document.querySelector('input[name="phone"]').value;
 
-    // Se a validação falhar, não envie o formulário
-    if (!validateCredentials()) {
+    
+    if (!validateCredentials()) {  // Se a validação falhar, não envie o formulário
         return;
     }
 
@@ -32,6 +32,33 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
             console.error('Erro:', error);
             alert('Erro ao enviar o e-mail. Tente novamente.');
         });
+});
+
+// Função para formatar o número de telefone
+function formatPhoneNumber(input) {
+    let value = input.value.replace(/\D/g, '');
+    
+    if (value.length > 0) {
+        if (value.length <= 2) {
+            value = `(${value}`;
+        } 
+        else if (value.length <= 7) {
+            value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+        } 
+        else if (value.length <= 11) {
+            value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+        } 
+        else {
+            value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
+        }
+    }
+    
+    input.value = value;
+}
+
+// Adiciona o evento de formatação ao campo de telefone
+document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
+    formatPhoneNumber(e.target);
 });
 
 // Função para validar os campos do formulário

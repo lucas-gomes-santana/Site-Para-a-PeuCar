@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://peucar-automotivos-ipira.vercel.app/sitemap-index.xml
 Sitemap: https://peucar-automotivos-ipira.vercel.app/sitemap.xml 

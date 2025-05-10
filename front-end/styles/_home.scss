@@ -213,7 +213,7 @@ $espaco: 15px;
         margin-top: 50px;
 
         .image-wrapper {
-            height: 300px;
+            height: 270px;
 
             .servicos-mecanicos {
                 height: 100%;
@@ -223,7 +223,7 @@ $espaco: 15px;
         }
 
         .container-content {
-            top: 20%;
+            top: 30%;
 
             h1 {
                 font-size: 0.8rem;
@@ -265,7 +265,6 @@ $espaco: 15px;
             height: 250px;
 
             .servicos-mecanicos {
-                height: 100%;
                 border: 1px solid gray;
                 border-radius: 5px;
             }
@@ -284,7 +283,7 @@ $espaco: 15px;
             }
 
             .PeuCar-logo {
-                width: 70px;
+                width: 50px;
             }
         }
     }
@@ -305,6 +304,28 @@ $espaco: 15px;
 
             .logos {
                 font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .container-home {
+        .image-wrapper {
+            height: 215px;
+
+            .container-content {
+                top: 20%;
+                left: 60%;
+                transform: translate(-5%, -30%);
+
+                h1 {
+                    font-size: 0.5rem;
+                }
+
+                h2 {
+                    font-size: 0.5rem;
+                }
             }
         }
     }

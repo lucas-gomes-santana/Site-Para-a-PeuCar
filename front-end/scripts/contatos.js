@@ -8,10 +8,13 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
     const name = document.querySelector('input[name="name"]').value;
     const phone = document.querySelector('input[name="phone"]').value;
 
+    const emailMessage = document.getElementById('mensagem');
     
     if (!validateCredentials()) {  // Se a validação falhar, não envie o formulário
         return;
     }
+
+    emailMessage.textContent = "Enviando mensagem...";
 
     // Envia os dados para a API
     fetch('https://peucar-automotivos-servidor.onrender.com/send-email', {
@@ -23,14 +26,18 @@ document.querySelector('.contacts-form').addEventListener('submit', function (ev
     })
         .then((response) => {
             if (response.ok) {
-                alert('E-mail enviado com sucesso!');
-            } else {
-                alert('Erro ao enviar o e-mail. Tente novamente.');
+                emailMessage.textContent = "E-mail enviado com sucesso!";
+                emailMessage.style.color = "green";
+            } 
+            else {
+                emailMessage.textContent = "Erro ao enviar o e-mail. Tente novamente.";
+                emailMessage.style.color = "red";
             }
         })
         .catch((error) => {
             console.error('Erro:', error);
-            alert('Erro ao enviar o e-mail. Tente novamente.');
+            emailMessage.textContent = "Erro ao enviar o e-mail. Tente novamente.";
+            emailMessage.style.color = "red";
         });
 });
 
@@ -57,8 +64,8 @@ function formatPhoneNumber(input) {
 }
 
 // Adiciona o evento de formatação ao campo de telefone
-document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
-    formatPhoneNumber(e.target);
+document.querySelector('input[name="phone"]').addEventListener('input', function(event) {
+    formatPhoneNumber(event.target);
 });
 
 // Função para validar os campos do formulário

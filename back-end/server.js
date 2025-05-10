@@ -42,7 +42,7 @@ app.post('/send-email', (req, res) => {
             from: process.env.EMAIL_SERVER,
             to: process.env.EMAIL_RECIPIENT,
             subject: subject,
-            text: `Mensagem enviada por ${name}\n\n Número: ${phone} \n\n E-mail: ${from}:\n\n${message}`,
+            text: `Mensagem enviada por ${name}\n\n Número: ${phone} \n\n E-mail: ${from}\n\n${message}`,
             replyTo: from,
         };
 
